@@ -1,0 +1,26 @@
+<div>
+    <h2>Zarejestruj się!</h2>
+    Email:
+    <input type="text" #email/>
+    <br>
+    <br>
+    Hasło: 
+    <input type="text" #password/>
+    <br>
+    <br>
+    <button (click)="onSignUp(email.value, password.value)">Zarejestruj</button>
+</div>
+<hr>
+
+<div>
+    <h2>Zaloguj się!</h2>
+    Email:
+    <input type="text" #emailLogin/>
+    <br>
+    <br>
+    Hasło: 
+    <input type="password" #passwordLogin/>
+    <br>
+    <br>
+    <button (click)="onSignIn(emailLogin.value, passwordLogin.value)">Zaloguj</button>
+</div>

@@ -1,0 +1,37 @@
+<div class="containter">
+    <div class="row justify-content-center p-2">
+        <h1>Dodawanie nowego dania</h1>
+        <p>Wszystkie pola muszą być wypełnione</p>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Nazwa dania" [(ngModel)]="name">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Rodzaj kuchni" [(ngModel)]="cuisine">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Typ dania"[(ngModel)]="type">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Kategoria dania"[(ngModel)]="category">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Składniki"[(ngModel)]="ingredients">
+    </div>
+    <div class="form-group">
+        <input type="number" class="form-control" placeholder="Maksymalna liczba dań" min="1" [(ngModel)]="maxQuantity">
+    </div>
+    <div class="form-group">
+        <input type="number" class="form-control" placeholder="Cena dania" min="1" [(ngModel)]="price">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Opis dania"[(ngModel)]="info">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Link do zdjęcia głównego"[(ngModel)]="mainImg">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Linki do dodatkowych zdjęć"[(ngModel)]="secondaryImgs">
+    </div>
+    <button class="btn btn-primary" (click)="addDish()" [disabled]="!name || !cuisine || !type || !category || !maxQuantity || !price || !info || !mainImg || !secondaryImgs || !ingredients">Dodaj danie do listy</button>
+</div>

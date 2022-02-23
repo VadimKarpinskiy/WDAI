@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="">RestaurantApp</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="menu" routerLinkActive="active-link">Menu</a>
+          </li>
+          <li class="nav-item" *ngIf="userRole === 1">
+            <a class="nav-link" routerLink="about" routerLinkActive="active-link">Dodaj danie</a>
+          </li>
+          <li class="nav-item" *ngIf="userRole === 2">
+            <a class="nav-link" routerLink="admin" routerLinkActive="active-link">Panel Administratora</a>
+          </li>
+          <li class="nav-item basket" *ngIf="userRole === 0">
+            <a class="nav-link" (click)="toggleBasket()">Koszyk <i class="bi bi-cart-check"></i></a>
+            <app-basket *ngIf="showBasket"></app-basket>
+          </li>
+          <li class="nav-item" *ngIf="!isLoggedIn">
+            <a class="nav-link" routerLink="login" routerLinkActive="active-link">Rejestracja/Logowanie</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+            <a class="nav-link">{{userEmail}}</a>
+          </li>
+          <button class="btn btn-primary" *ngIf="isLoggedIn" (click)="handleLogout()">Wyloguj</button>
+        </ul>
+      </div>
+    </div>
+  </nav>

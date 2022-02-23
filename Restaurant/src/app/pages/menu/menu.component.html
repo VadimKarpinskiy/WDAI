@@ -1,0 +1,4 @@
+<div class="menu mt-4 mb-4">
+    <h1 class="text-center">Nasze menu:</h1>
+    <app-dishes *ngIf="dishes$ | async as dishes" [dishes]="dishes"></app-dishes>   
+</div>

@@ -1,0 +1,26 @@
+<h2>Wybierz typ persystencji: </h2>
+    <div class="persistence">
+        <button class="btn btn-primary" (click)="changePersistence('local')">Persystencja lokalna</button>
+        <button class="btn btn-primary" (click)="changePersistence('none')">Brak persystencji</button>
+        <button class="btn btn-primary" (click)="changePersistence('session')">Persystencja sesji</button>
+    </div>
+<hr>
+
+
+<h2>Role użytkowników w systemie:</h2>
+<ul>
+    <li>Zwykły użytkownik: 0</li>
+    <li>Menedżer: 1</li>
+    <li>Administator: 2</li>
+</ul>
+<div class="users" *ngFor="let user of userList" >
+    <h4>E-mail: {{user.email}}</h4>      
+    <h4>Klasyfikator roli: {{user.role}}</h4>
+    <div class="buttons">
+        <button class="btn btn-danger" (click)="removeUser(user)">Usuń użytkownika</button>
+        <button class="btn btn-light" (click)="makeClient(user)">Klient</button>
+        <button class="btn btn-secondary" (click)="makeManager(user)">Menedżer</button>
+        <button class="btn btn-dark" (click)="makeAdmin(user)">Administrator</button>
+    </div>
+    <hr>
+</div>

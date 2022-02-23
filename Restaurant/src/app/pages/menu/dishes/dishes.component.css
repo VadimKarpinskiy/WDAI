@@ -1,0 +1,9 @@
+.control {
+    display: inline-flex;
+    width: 300px;
+    justify-content: flex-start;
+}
+
+.btn  {
+    height:53px;
+}

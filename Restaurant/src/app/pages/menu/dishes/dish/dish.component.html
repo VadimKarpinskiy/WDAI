@@ -1,0 +1,20 @@
+<div class="dishbox">
+    <img [src]="dish?.mainImg" (click)="showInfo()" />
+    <h1>{{dish?.name}}</h1>
+    <p>{{dish?.type}}</p>
+    <p>{{dish?.cuisine}}</p>
+    <p>{{dish?.category}}</p>
+    <p>{{dish?.price}} $</p>
+    <p [style.color]="getColor()">Liczba pozostałych dań: {{ maxQuantity }} szt.</p>
+
+    <div class="interactions">
+        <div class="ordering">
+            <button [disabled]="shouldIncreaseButtonBeDisabled" class="btn btn-primary" (click)="increaseDish()">+</button>
+            <p id="quantity">{{orderedCount}}</p>
+            <button [disabled]="shouldDecreaseButtonBeDisabled" class="btn btn-primary" (click)="decreaseDish()">-</button>
+        </div>
+        
+        <button [disabled]="userRole != 1"  class="btn btn-danger" (click)="deleteDish()"> Delete Dish </button>
+        <button [disabled]="userRole != 0" class="btn btn-success" (click)="rateDish()"> Rate Dish! </button>
+    </div>
+</div>

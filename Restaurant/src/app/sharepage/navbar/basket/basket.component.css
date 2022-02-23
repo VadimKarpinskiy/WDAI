@@ -1,0 +1,30 @@
+.basket-container {
+    width: 200px;
+    height: 300px;
+    border: 3px solid whitesmoke;
+    color: whitesmoke;
+    overflow:auto;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+}
+
+button:disabled {
+    background-color: lightblue;
+    opacity: 0.5;
+    color: var(--primary-color);
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button {
+    background-color: lightblue;
+    color: var(--primary-color);
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}

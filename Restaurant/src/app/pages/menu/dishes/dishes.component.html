@@ -1,0 +1,54 @@
+<div class="row">
+  <div class = "control">
+    <mat-form-field appearance="fill">
+      <mat-label>Kategoria posiłku...</mat-label>
+      <mat-select [(ngModel)]="selectedCategory" (ngModelChange)="updateFilteredDishes()"  name="food">
+        <mat-option *ngFor="let category of categories" [value]="category">
+          {{ category }}
+        </mat-option>
+      </mat-select>
+  </mat-form-field>
+  <button [disabled]="emptyParameter(selectedCategory)" class="btn btn-primary" (click)="cleanCategory()">X</button>
+  </div>
+
+  <div class = "control">
+    <mat-form-field appearance="fill">
+        <mat-label>Kuchnia...</mat-label>
+        <mat-select [(ngModel)]="selectedCuisine" (ngModelChange)="updateFilteredDishes()"  name="a">
+          <mat-option *ngFor="let cuisine of cuisines" [value]="cuisine">
+            {{ cuisine }}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button [disabled]="emptyParameter(selectedCuisine)" class="btn btn-primary" (click)="cleanCuisine()">X</button>
+  </div>
+
+  <div class = "control">
+    <mat-form-field appearance="fill">
+        <mat-label>Typ dania...</mat-label>
+        <mat-select [(ngModel)]="selectedType" (ngModelChange)="updateFilteredDishes()"  name="a">
+          <mat-option *ngFor="let type of types" [value]="type">
+            {{ type }}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button [disabled]="emptyParameter(selectedType)" class="btn btn-primary" (click)="cleanType()">X</button>
+  </div>
+
+  <div class = "control">
+    <mat-form-field appearance="fill">
+      <mat-label>Cena...</mat-label>
+      <mat-select [(ngModel)]="selectedCostRange" (ngModelChange)="updateFilteredDishes()"  name="a">
+        <mat-option *ngFor="let cost of ['$', '$$', '$$$']" [value]="cost">
+          {{ cost }}
+        </mat-option>
+      </mat-select>
+  </mat-form-field>
+  <button [disabled]="emptyParameter(selectedCostRange)" class="btn btn-primary" (click)="cleanCost()">X</button>
+</div>
+
+    <pagination-controls (pageChange)="page = $event" previousLabel="Poprednie" nextLabel="Następne"></pagination-controls>
+    <div class="col-lg-3 mt-3" *ngFor="let d of filteredDishes | paginate: { itemsPerPage: 8, currentPage: page }">
+        <app-dish [dish]=d> </app-dish>
+    </div>
+</div>

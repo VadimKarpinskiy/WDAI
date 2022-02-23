@@ -1,0 +1,74 @@
+.banner {
+    background-image: url("../../../assets/img/restaurant-banner.jpg");
+    height: 600px;
+    background-position: center top;
+    background-size: cover;
+    /* filter: blur(8px); */
+}
+
+.container {
+    position: absolute;
+    top: 40%;
+}
+
+.container h1 {
+    font-size: 70px;
+    font-family: Roboto;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.container a {
+    text-decoration: none;
+    background-color: whitesmoke;
+    padding: 10px 20px;
+    border-radius: 3px;
+    color: black;
+    transition: color .3s linear;
+}
+
+.container a:hover{
+    color: var(--primary-color);
+    transition: opacity .3s linear;
+}
+
+.container a:hover:after {
+    opacity: 1;
+}
+
+.step {
+    background-color: black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.step h1 {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.step p {
+    color: whitesmoke;
+}
+
+.localization {
+    height: 600px;
+    opacity: 0.4;
+    display: block;
+    width: 100%;
+    transition: .5s ease;
+}
+
+.localization:hover {
+    height: 600px;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    transition: .5s ease;
+}
+
+.info {
+    text-align: center;
+}
+

@@ -1,0 +1,12 @@
+* {
+    overflow: hidden;
+}
+
+.form-control {
+    margin: 5px 5px;
+    width: 600px;
+}
+
+button {
+    margin: 5px 5px;
+}

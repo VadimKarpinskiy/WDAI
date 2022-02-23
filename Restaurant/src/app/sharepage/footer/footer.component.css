@@ -1,0 +1,42 @@
+.footer {
+    overflow: hidden;
+    background-color: black;
+    top: 100%;
+    padding: 20px 10px;
+    position: sticky;
+}
+
+h1 {
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 0px 7px;
+}
+
+i {
+    padding: 0px 10px;
+}
+
+a:hover {
+    color: var(--primary-color)
+}
+
+.fb:hover{
+    color: blue; 
+}
+
+.yt:hover{
+    color: red;
+}
+
+.wp:hover {
+    color: green;
+}
+
+.ig:hover {
+    color: palevioletred
+}

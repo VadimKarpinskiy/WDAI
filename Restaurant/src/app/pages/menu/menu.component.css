@@ -1,0 +1,33 @@
+.menu {
+    margin: 5px 5px;
+}
+
+.dishbox 
+{
+    padding: 10px 5px;
+} 
+.dishbox img
+{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.dishbox h1 
+{
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.interactions {
+    padding: 10px 10px;
+    display: flex;
+}
+
+.ordering {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+}

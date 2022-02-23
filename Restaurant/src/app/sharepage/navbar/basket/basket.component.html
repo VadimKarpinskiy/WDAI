@@ -1,0 +1,15 @@
+<div class="basket-container">
+    <div *ngFor="let orderedDish of orderedDishes">
+        <div class="single-dish">
+            <p>{{orderedDish.name}}</p>
+            <p>{{orderedDish.price}} $</p>
+        </div>
+        <hr>
+    </div>
+    <div>
+        <h4>Lączna kwota zamówienia:</h4>
+        {{summaryCost(orderedDishes)}} $
+    </div>
+
+    <button [disabled]="orderedDishes.length == 0" (click)="submitOrder()">Złóż zamówienie</button>
+</div>
